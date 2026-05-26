@@ -40,6 +40,18 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      - name: Install D2
+        run: |
+          curl -fsSL https://d2lang.com/install.sh | sh -s --
+          echo "$HOME/.d2/bin" >> "$GITHUB_PATH"
+
+      - name: Compile D2 diagrams
+        run: |
+          find src/img -name "*.d2" -type f -print0 | while IFS= read -r -d '' file; do
+            d2 "$file" "${file%.d2}.svg"
+          done
+      
       - name: Build with mdBook
         run: mdbook build
       - name: Upload artifact
