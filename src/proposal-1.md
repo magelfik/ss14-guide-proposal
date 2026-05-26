@@ -1,0 +1,1 @@
+# Proposal - Just like in game (*)
