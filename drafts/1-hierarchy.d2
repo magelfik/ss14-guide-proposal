@@ -1,0 +1,86 @@
+vars: {
+    d2-config: {
+        layout-engine: elk
+    }
+}
+
+title: |md
+    # A proposition for a SS14 server hierarchy
+    ## By Adam Greer aka Magelfik
+    Version 0.1
+| {near: top-center}
+direction: down
+
+classes: {
+    user: {
+        shape: person
+    }
+}
+
+# CC Team
+cc_team: Central Committee {
+    explain: |md
+        Handles all central affairs,  
+        hires managers and project manager.  
+        
+        Has ownership of Git Repository and Game Server  
+        as a collective.
+    |
+
+    hr_elect: HR Team \n Member { class: user }
+    dev_elect: Dev Team \n Member { class: user }
+    discord_elect: Discord \n Team M. { class: user }
+    mod_elect: Mod \n Team M. { class: user }
+
+    project_manager: Project \n Manager { class: user }
+}
+
+# Dev Team
+dev_team: Development Team {
+    explain: |
+        Maintains codebase, server,  
+        and game content
+    |
+    manager: Manager { class: user }
+
+    maintainer: Maintainers
+    contributor: Contributors
+    
+    contributor <- maintainer : Can become
+}
+
+# connectors for cc_team
+cc_team  <- hr_team : Answers to
+cc_team <- dev_team : Answers to
+cc_team <- discord_team : Answers to
+cc_team <- mod_team : Answers to
+
+# HR Team
+hr_team: HR Team {
+    explain: |md
+        Handles hiring, firing, player  
+        disputes
+    |
+    manager: Manager { class: user }
+    hr_person: HR Team Members
+}
+
+# Discord Team 
+discord_team: Discord Team {
+    explain: |md
+        Handles the Discord channel
+    |
+    manager: Manager { class: user }
+    discord_person: Discord Team Members
+}
+
+# Moderation team
+mod_team: Moderation Team {
+    explain: |md
+        Handles server events,  
+        light player support  
+        and rule compliance
+    |
+    manager: Manager { class: user }
+    mods: Moderators
+}
