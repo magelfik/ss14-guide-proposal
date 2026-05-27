@@ -150,6 +150,6 @@ One project Manager, one HR representative. It's a bit like what @hiu said. When
 
 I believe all decisions should be put to a vote. No matter what. Decisions should be posted immediately to staff after they've been voted.
 
-#### Quorum 
+#### Quorum
 
 The minimum of voting members is 3, as it's impossible to get a reliable vote result with less than that.
