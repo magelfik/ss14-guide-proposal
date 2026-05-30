@@ -1,4 +1,4 @@
-# The proposal
+# Proposal v1
 
 ![Proposal](img/1-hierarchy.svg)
 [This picture can be zoomed in !](./img/1-hierarchy.svg)

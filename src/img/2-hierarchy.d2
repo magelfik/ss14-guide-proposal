@@ -1,0 +1,79 @@
+vars: {
+    d2-config: {
+        layout-engine: elk
+    }
+}
+
+title: |md
+    # A proposition for a SS14 server hierarchy
+    ## By Magelfik (Adam Greer) & lottorenato (OniWan)
+    Version 0.2
+| {near: top-center}
+direction: down
+
+classes: {
+    user: {
+        shape: person
+    }
+}
+
+
+# CC Team
+cc_team: Central Committee {
+    explain: |md
+        Handles all central affairs, hiring and firing.
+        
+        Has ownership of Git Repository and Game Server  
+        as a collective.
+    |
+
+    head_admin: Head Admins { 
+        width: 64
+        height: 64
+        class: user 
+    }
+
+    project_manager: Project Manager { 
+        width: 64
+        height: 64
+        class: user 
+    }
+}
+
+
+# Dev Team
+dev_team: Development Team {
+    explain: |
+        Maintains codebase, server,  
+        and game content
+    |
+    manager: Head Maintainer { 
+        class: user
+        width: 64
+        height: 64
+     }
+
+    maintainer: Maintainers
+    contributor: Contributors
+
+    maintainer <- contributor : Answer to
+    manager <- maintainer : Answer to
+}
+
+# connectors for cc_team
+cc_team <- dev_team : Answers to
+cc_team <- mod_team : Answers to
+
+# Moderation team
+mod_team: Moderation Team {
+    explain: |md
+        Handles server events, light player support  
+        and rule compliance (IG and Discord)
+    |
+    trial_moderator: Trial moderators
+    moderator: Moderators
+    senior_admin: Senior Admins
+
+    moderator <- trial_moderator: Answer to
+    senior_admin <- moderator : Answer to
+}

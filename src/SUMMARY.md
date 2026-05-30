@@ -3,4 +3,5 @@
 - [Welcome](./index.md)
 - [Why](./why.md)
 
-- [The proposal](./proposal-1.md)
+- [Proposal v1](./proposal-1.md)
+- [Proposal v2](./proposal-2.md)
