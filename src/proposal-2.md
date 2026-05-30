@@ -9,7 +9,7 @@ Please refer to the v1 for basic explanations.
 
 ### Merging the moderation team
 
-@lottorenato realized Discord bots could logs users banned or kicked from the Discord. Therefore logging the admin's actions and avoiding silent bans. This is a great opportunity to merge the Discord team and IG moderation into one team : _the moderation team_.
+@lottorenato pointed out Discord bots could logs users banned or kicked from the Discord. Therefore logging the admin's actions and avoiding silent bans. This is a great opportunity to merge the Discord team and IG moderation into one team : _the moderation team_.
 
 ### Reworking the Central Committee
 
