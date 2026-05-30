@@ -1,9 +1,9 @@
-# Proposal v2
+# Proposal v2
 
 ![Proposal](img/2-hierarchy.svg)
 [This picture can be zoomed in !](./img/2-hierarchy.svg)
-
-## Explaining
+ 
+## Explaining
 
 Please refer to the v1 for basic explanations.
 
