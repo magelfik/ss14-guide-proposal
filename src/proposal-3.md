@@ -15,4 +15,4 @@ After submitting v2 to @hiu, a few changes have been requested :
 * Moderators have been renamed because renaming the role would cause friction with the players, as players call them admins.
 * Trial moderators have been renamed to junior admins for the same reason.
 * Senior admin has not been renamed for the same reason.
-
+* Head Maintainer has been renamed Lead Maintainer
